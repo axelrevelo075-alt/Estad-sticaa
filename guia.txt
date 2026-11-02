@@ -1,0 +1,25 @@
+PORTAFOLIO DE ESTADÍSTICA — AXEL REVELO
+
+1. Extrae portafolio.zip. Abre index.html en tu navegador.
+2. Guarda todos los documentos del equipo en esa misma carpeta.
+3. Abre recursos.js con un editor de texto. Cambia url:null por una ruta entre comillas. Ejemplo: url:"informe.pdf". Usa el nombre exacto del archivo, incluida su extensión.
+4. Para Forms, Sheets y videos puedes usar su enlace completo en url. Verifica los permisos para que la docente pueda abrirlo.
+5. Guarda recursos.js y recarga index.html. Los recursos pasan de Pendiente a Abrir.
+6. En las listas 2 y 3 puedes agregar recursos con el mismo formato de la lista 1.
+7. Se colocó provisionalmente el proyecto de análisis en el primer parcial. Si corresponde a otro, mueve su lista a la clave 2 o 3.
+8. El alcance actual llega hasta medidas de dispersión. No se han inventado datos ni resultados. El tema exacto de la encuesta está pendiente.
+9. Para entregar sin conexión, comparte la carpeta completa o comprímela en ZIP; no envíes solamente index.html. Los enlaces externos necesitan internet.
+10. La copia alojada se actualiza volviendo a publicar los archivos modificados. Editar la copia descargada no cambia la alojada.
+
+EJEMPLO DE RECURSO:
+{titulo:'Informe',tipo:'PDF',descripcion:'Informe final del equipo.',url:'informe.pdf'}
+
+ARCHIVOS DE LA PÁGINA:
+index.html — Diseño y navegación.
+recursos.js — Índice y enlaces de los tres parciales.
+guia.txt — Estas instrucciones.
+
+ANTES DE ENTREGAR:
+Confirma el parcial correspondiente y el título del proyecto.
+Agrega los archivos reales y revisa cada enlace.
+Abre la carpeta en otro equipo y comprueba que todo funciona.
