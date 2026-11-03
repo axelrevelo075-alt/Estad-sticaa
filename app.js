@@ -4,8 +4,8 @@ const D=window.PORTAFOLIO_DATA;
 if(!D||!Array.isArray(D.recursos)||!Array.isArray(D.parciales)){console.error('Falta el archivo recursos.js');return;}
 const $=(selector)=>document.querySelector(selector);
 let current=1,activeFilter='Todos',textQuery='';
-const groupsOrder=['Carpetas del proyecto','Encuesta y datos','Análisis estadístico','Informe y manuales','Material didáctico'];
-const groupLabels={'Carpetas del proyecto':'Acceso a Google Drive','Encuesta y datos':'Encuesta y base de datos','Análisis estadístico':'Cálculos, tablas y gráficos','Informe y manuales':'Documentación e informes','Material didáctico':'Materiales de apoyo'};
+const groupsOrder=["Carpetas del proyecto","Encuesta y datos","Axel Revelo","Estefano Iñaguazo","Análisis estadístico","Informe y manuales","Material didáctico"];
+const groupLabels={'Carpetas del proyecto':'Acceso a Google Drive','Encuesta y datos':'Encuesta y base de datos','Análisis estadístico':'Cálculos, tablas y gráficos','Informe y manuales':'Documentación e informes','Material didáctico':'Mapa conceptual y materiales de apoyo','Axel Revelo':'Trabajos de Axel Revelo','Estefano Iñaguazo':'Trabajos de Estefano Iñaguazo'};
 const categoryLabel=(name)=>groupLabels[name]||name;
 const validLink=(s)=>{try{const u=new URL(s);return ['https:','http:'].includes(u.protocol);}catch(_){return false;}};
 const linked=(r)=>validLink(r.url||'');
