@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Editar enlaces · Portafolio Estadística Grupo 05</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap');
+:root{--navy:#10223c;--teal:#0c8b81;--muted:#688093;--border:#dfe8ee}*{box-sizing:border-box}body{background:#f4f8fb;color:#203447;margin:0;font-family:'DM Sans',Arial,sans-serif}a{color:inherit}.header{background:var(--navy);color:white;padding:24px 0}.wrap{max-width:1020px;padding:0 22px;margin:auto}.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:15px}.header strong{font-family:Manrope,sans-serif;font-size:18px}.header a{font-size:12px;text-decoration:none;color:#a3e5d9}.main{padding-top:37px;padding-bottom:65px}h1{font:800 29px Manrope,Arial,sans-serif;letter-spacing:-.035em;margin:0 0 12px}p{line-height:1.7}.lead{color:#667d8e;margin:0 0 23px;max-width:770px;font-size:14px}.note{border-left:4px solid #19a49a;background:#e3f5f2;border-radius:8px;padding:15px 19px;font-size:13px;line-height:1.7;margin-bottom:24px}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}.btn{border:0;border-radius:9px;padding:12px 16px;background:var(--navy);color:#fff;font:800 12px 'DM Sans',Arial;cursor:pointer}.btn.secondary{background:#e1f0f0;color:#145e5c}.btn.danger{background:#ffeded;color:#a94f4f}.btn:hover{filter:brightness(1.08)}.panel{background:white;border:1px solid var(--border);border-radius:13px;padding:22px;margin-bottom:20px;box-shadow:0 12px 25px rgba(16,34,60,.025)}.panel h2{font:800 17px Manrope,Arial;margin:0 0 8px}.muted{font-size:12px;color:#74889a;margin:0 0 17px}.entry{padding:17px 0;border-bottom:1px solid #edf2f5}.entry:last-child{border-bottom:0}.entry-top{display:flex;gap:20px;align-items:start;justify-content:space-between;margin-bottom:11px}.entry strong{font-size:13px}.entry small{display:block;color:#8395a4;font-size:11px;margin-top:5px}.entry .verified{color:#148b7a;font-size:10px;font-weight:800;background:#e5f7f2;border-radius:5px;padding:5px 8px;white-space:nowrap}.entry .pending{color:#a8834d;background:#fff5e6;font-size:10px;font-weight:800;border-radius:5px;padding:5px 8px;white-space:nowrap}.line{display:flex;gap:8px}.line input{flex:1;min-width:0}input,select{border:1px solid #cfdae3;border-radius:8px;min-height:40px;padding:9px 11px;font:12px 'DM Sans',Arial;color:#273b4b;background:#fff;width:100%}input:focus,select:focus{outline:2px solid #8bcfc5}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.form-grid label{display:flex;flex-direction:column;gap:6px;font-size:11px;color:#607486;font-weight:800}.span2{grid-column:span 2}.footer-note{font-size:11px;color:#8498a8;padding:12px 0}.success{color:#0a806f;font-weight:800;font-size:12px;margin:0 0 15px;display:none}.visible{display:block}.delete{background:none;border:0;color:#ab6262;font-size:11px;font-weight:800;cursor:pointer;margin-left:12px}@media(max-width:600px){.form-grid{grid-template-columns:1fr}.span2{grid-column:span 1}.entry-top{display:block}.entry-top .verified,.entry-top .pending{display:inline-block;margin-top:8px}.line{flex-wrap:wrap}.line .btn{width:100%}h1{font-size:25px}}
+</style>
+<script src="recursos.js"></script>
+</head>
+<body>
+<header class="header"><div class="wrap"><strong>Editor de enlaces · Grupo 05</strong><a href="index.html">← Ver portafolio</a></div></header>
+<main class="main wrap">
+<h1>Agrega los documentos del equipo</h1>
+<p class="lead">En esta pantalla puedes pegar los enlaces de archivos de Drive, formularios, hojas de cálculo o videos y asignarlos a cada parcial. No necesitas escribir código.</p>
+<div class="note"><strong>Importante:</strong> este editor no modifica Google Drive ni la web publicada automáticamente. Al terminar, pulsa <strong>“Descargar recursos.js”</strong> y reemplaza el archivo con ese nombre dentro de la carpeta de tu página (y en GitHub, si ya la publicaste).</div>
+<div class="toolbar"><button class="btn" id="download" type="button">↓ Descargar recursos.js</button><button class="btn secondary" type="button" id="preview">↗ Ver página actual</button></div>
+<p id="feedback" class="success" role="status"></p>
+<div class="panel"><h2>Recursos existentes</h2><p class="muted">Pega una dirección pública o compartida en el campo correspondiente. Los enlaces no configurados aparecerán como “Por vincular”.</p><div id="rows"></div></div>
+<div class="panel"><h2>Añadir otro documento</h2><p class="muted">Si un compañero envía varios archivos para una misma categoría, crea una entrada nueva por cada archivo.</p>
+<form id="newResource" class="form-grid">
+<label>Título del archivo<input name="titulo" required maxlength="130" placeholder="Ej.: Excel - Pregunta 5 - Axel Revelo"></label>
+<label>Parcial<select name="parcial"><option value="1">Primer parcial</option><option value="2">Segundo parcial</option><option value="3">Tercer parcial</option></select></label>
+<label>Categoría<select name="categoria"><option>Encuesta y datos</option><option>Análisis estadístico</option><option>Informe y manuales</option><option>Material didáctico</option><option>Carpetas del proyecto</option></select></label>
+<label>Tipo<input name="tipo" placeholder="PDF / Excel / Video" value="PDF"></label>
+<label class="span2">Descripción<input name="descripcion" placeholder="Explicación breve de lo que contiene el archivo"></label>
+<label class="span2">Enlace a Google Drive (u otra página web)<input name="url" type="url" placeholder="https://drive.google.com/file/d/.../view"></label>
+<div class="span2"><button class="btn secondary" type="submit">+ Añadir al catálogo</button></div>
+</form></div>
+<div class="panel"><h2>Cómo conseguir el enlace</h2><p class="muted" style="margin-bottom:0">En Google Drive, haz clic derecho sobre el archivo → <b>Compartir</b> → <b>Copiar enlace</b>. Asegúrate de que las personas que visitarán tu portafolio tengan permiso para abrirlo. Evita publicar respuestas personales o sensibles de la encuesta.</p></div>
+<div class="footer-note">Este editor funciona sin cuentas, sin contraseña y sin servidor. Los cambios se guardan únicamente en el archivo JS que descargas.</div>
+</main>
+<script>
+(()=>{
+const data=JSON.parse(JSON.stringify(window.PORTAFOLIO_DATA));
+const rows=document.getElementById('rows'),feedback=document.getElementById('feedback');
+function valid(url){if(!url)return true;try{const u=new URL(url);return u.protocol==='https:'||u.protocol==='http:';}catch{return false;}}
+function show(msg){feedback.textContent=msg;feedback.classList.add('visible');}
+function render(){rows.replaceChildren();for(const r of data.recursos){const entry=document.createElement('div');entry.className='entry';
+const head=document.createElement('div');head.className='entry-top';const title=document.createElement('div');const strong=document.createElement('strong');strong.textContent=r.titulo;const meta=document.createElement('small');meta.textContent=(r.parcial?'Parcial '+r.parcial:'Carpeta general')+' · '+r.categoria+' · '+r.tipo;title.append(strong,meta);head.append(title);
+const badge=document.createElement('span');badge.className=r.verificado?'verified':'pending';badge.textContent=r.url?'Con enlace':'Por vincular';head.append(badge);entry.append(head);
+const line=document.createElement('div');line.className='line';const input=document.createElement('input');input.type='url';input.placeholder='Pega aquí el enlace del archivo';input.setAttribute('aria-label','Enlace de '+r.titulo);input.value=r.url||'';
+input.addEventListener('input',()=>{r.url=input.value.trim();badge.textContent=r.url?'Con enlace':'Por vincular';badge.className=r.url?'verified':'pending';});line.append(input);
+if(!r.verificado){const b=document.createElement('button');b.type='button';b.className='delete';b.textContent='Eliminar entrada';b.addEventListener('click',()=>{data.recursos.splice(data.recursos.indexOf(r),1);render();});line.append(b);}
+entry.append(line);rows.append(entry);}}
+document.getElementById('newResource').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const url=String(f.get('url')||'').trim();if(!valid(url)){show('Revisa el enlace: debe comenzar por https:// o http://.');return;}
+data.recursos.push({id:'recurso-'+Date.now()+'-'+Math.floor(Math.random()*9999),parcial:Number(f.get('parcial')),categoria:String(f.get('categoria')),titulo:String(f.get('titulo')).trim(),descripcion:String(f.get('descripcion')).trim(),tipo:String(f.get('tipo')).trim()||'Documento',url,verificado:false});render();e.target.reset();show('Recurso añadido. Descarga recursos.js para aplicar los cambios.');});
+document.getElementById('download').addEventListener('click',()=>{const invalid=data.recursos.find(r=>r.url&&!valid(r.url));if(invalid){show('Corrige el enlace en «'+invalid.titulo+'». Usa una URL http:// o https://.');return;}
+data.meta.fechaActualizacion=new Date().toLocaleDateString('es-EC',{day:'2-digit',month:'long',year:'numeric'});
+const contents='/* Catálogo de recursos exportado desde editar-enlaces.html */\nwindow.PORTAFOLIO_DATA = '+JSON.stringify(data,null,2)+';\n';const blob=new Blob([contents],{type:'application/javascript;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='recursos.js';a.click();URL.revokeObjectURL(url);show('Archivo recursos.js descargado. Reemplázalo en la carpeta del sitio web y vuelve a abrir index.html.');});
+document.getElementById('preview').addEventListener('click',()=>window.open('index.html','_blank','noopener,noreferrer'));
+render();
+})();
+</script>
+</body>
+</html>
