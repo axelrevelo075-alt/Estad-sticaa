@@ -127,7 +127,7 @@
     sections.replaceChildren();
 
     if(selectedPartial === 1) {
-      todo.textContent = "Por completar: trabajos individuales de Jhon Sangurima y documentos del segundo y tercer parcial.";
+      todo.textContent = "Por completar: documentos del segundo y tercer parcial.";
       todo.style.display = "block";
     } else {
       todo.style.display = "none";

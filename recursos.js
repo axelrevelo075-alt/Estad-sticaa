@@ -1,4 +1,4 @@
-/* Catálogo sincronizado con archivos del Drive del Grupo 05, sin enlaces a carpetas. */
+/* Actualizado con los 37 documentos del Primer Parcial del Grupo 05. */
 window.PORTAFOLIO_DATA = {
   "meta": {
     "titulo": "Portafolio de Estadística · Grupo 05",
@@ -180,7 +180,33 @@ window.PORTAFOLIO_DATA = {
           "https://docs.google.com/spreadsheets/d/1obVxFeBnZX9De0vNa_XLNSlQ-4twequ2/edit?usp=drivesdk&ouid=106199741310115389819&rtpof=true&sd=true"
         ]
       ],
-      "Jhon Sangurima": []
+      "Jhon Sangurima": [
+        [
+          "JAMOVI_Pregunta 3_Sangurima_Jhon.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/1hZxprdUTxeuSF8JBDcarxFI1wUuB-siN/view?usp=drivesdk"
+        ],
+        [
+          "JAMOVI_Pregunta 3_Sangurima_Jhon.omv",
+          "Jamovi",
+          "https://drive.google.com/file/d/1c4nos3LL3sCUDD7ZwLsLRC6zSNoOvxwG/view?usp=drivesdk"
+        ],
+        [
+          "Excel_Pregunta 3_Sangurima_Jhon.xlsx",
+          "Excel",
+          "https://docs.google.com/spreadsheets/d/11EuoxMYyriLRtiAAkdvRIzy5tuL3NHfG/edit?usp=drivesdk&ouid=106199741310115389819&rtpof=true&sd=true"
+        ],
+        [
+          "Excel_Pregunta 3_Sangurima_Jhon.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/115zplCFXVTAfmfWMwcfqJBf48wqUfv2w/view?usp=drivesdk"
+        ],
+        [
+          "Manual_Excel_JAMOVI_Sangurima_Jhon.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/1DVL7KNbYcH2-gZ5wO-3e7i7FZQpwXuuq/view?usp=drivesdk"
+        ]
+      ]
     },
     "2": {},
     "3": {}
