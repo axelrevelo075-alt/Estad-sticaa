@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portafolio de Estadística del Grupo 05 con enlaces directos a los archivos del proyecto.">
   <title>Portafolio de Estadística · Grupo 05</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261103c">
 </head>
 <body>
   <header class="header">
@@ -23,6 +23,7 @@
       <div>
         <h1>Portafolio sobre <span>gastos</span> y análisis de datos</h1>
         <p>Reúne los archivos del proyecto de Estadística sobre estudiantes de provincia en la ESPE: encuesta, informe, análisis en Excel y Jamovi, y documentos individuales del equipo.</p>
+        <a class="hero-to-work" href="#trabajos-individuales" id="heroWorkLink">Ver trabajos individuales <span aria-hidden="true">↗</span></a>
         <div class="hero-meta">
           <span class="pill">Tema: gastos y movilidad</span>
           <span class="pill">24 archivos enlazados</span>
@@ -66,6 +67,10 @@
           </div>
           <div class="count" id="fileCount">0 archivos</div>
         </div>
+        <div class="view-nav" id="viewNav" aria-label="Contenido del primer parcial">
+          <button class="view-button" type="button" data-section="individual" aria-pressed="true"><span class="view-num">01</span> Trabajos individuales <span class="view-quantity">19 archivos</span></button>
+          <button class="view-button" type="button" data-section="general" aria-pressed="false"><span class="view-num">02</span> Documentos generales <span class="view-quantity">5 archivos</span></button>
+        </div>
         <div class="tools">
           <div class="index" id="index"></div>
           <label class="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar por documento o integrante..."></label>
@@ -80,7 +85,7 @@
     <div class="wrap">Universidad de las Fuerzas Armadas ESPE · Grupo 05 · Página preparada para Axel Revelo</div>
   </footer>
 
-  <script src="recursos.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="recursos.js?v=20261103c" defer></script>
+  <script src="app.js?v=20261103c" defer></script>
 </body>
 </html>

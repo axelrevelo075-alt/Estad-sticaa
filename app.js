@@ -12,6 +12,7 @@
   const fileCount = document.getElementById("fileCount");
   const todo = document.getElementById("todoBox");
   let selectedPartial = 1;
+  let selectedSection = "individual";
 
   const normalize = value => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 
@@ -103,7 +104,16 @@
     subtitle.textContent = selectedPartial===1
       ? "Encuentra los documentos generales y los trabajos de cada integrante."
       : "Este parcial aún no tiene documentos disponibles.";
-    fileCount.textContent = docs.length + (docs.length===1 ? " archivo" : " archivos");
+    const displayedCount = selectedPartial===1
+      ? (selectedSection==="individual" ? members.reduce((n,name)=>n+(groups[name]||[]).length,0) : (groups.General||[]).length)
+      : docs.length;
+    fileCount.textContent = displayedCount + (displayedCount===1 ? " archivo" : " archivos");
+    const viewNav = document.getElementById("viewNav");
+    viewNav.hidden = selectedPartial!==1;
+    viewNav.querySelectorAll("[data-section]").forEach(button=>{
+      button.classList.toggle("active",button.dataset.section===selectedSection);
+      button.setAttribute("aria-pressed",String(button.dataset.section===selectedSection));
+    });
     index.replaceChildren();
     sections.replaceChildren();
 
@@ -125,7 +135,7 @@
     const general = groups.General || [];
     const generalGroupMatch = normalize("Documentos generales").includes(query);
     const visibleGeneral = general.filter(doc=> !query || generalGroupMatch || normalize(doc[0] + " " + doc[1]).includes(query));
-    if(visibleGeneral.length) {
+    if(visibleGeneral.length && selectedSection==="general") {
       addIndex("Documentos generales","#documentos-generales",visibleGeneral.length);
       createGeneralSection(visibleGeneral);
     }
@@ -140,13 +150,13 @@
         return shouldShow ? [name,matches] : null;
       })
       .filter(Boolean);
-    if(people.length) {
+    if(people.length && selectedSection==="individual") {
       const count = people.reduce((sum,person)=>sum+person[1].length,0);
       addIndex("Trabajos individuales","#trabajos-individuales",count);
       createIndividualSection(people,query);
     }
 
-    if(!visibleGeneral.length && !people.length) {
+    if((selectedSection==="general" && !visibleGeneral.length) || (selectedSection==="individual" && !people.length)) {
       const empty = make("div","empty");
       empty.append(make("h3","","No encontramos ese archivo"));
       empty.append(make("p","","Busca por el nombre de un integrante o por el documento."));
@@ -159,9 +169,25 @@
       document.querySelectorAll(".switch").forEach(b=>b.classList.remove("active"));
       button.classList.add("active");
       selectedPartial = Number(button.dataset.partial);
+      selectedSection = "individual";
       search.value = "";
       render();
     });
+  });
+  document.querySelectorAll("[data-section]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      selectedSection = button.dataset.section;
+      search.value = "";
+      render();
+    });
+  });
+  const heroWork = document.getElementById("heroWorkLink");
+  heroWork.addEventListener("click",()=>{
+    selectedPartial=1;
+    selectedSection="individual";
+    document.querySelectorAll(".switch").forEach(b=>b.classList.toggle("active",Number(b.dataset.partial)===1));
+    search.value="";
+    render();
   });
   search.addEventListener("input",render);
   render();
