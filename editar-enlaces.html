@@ -14,8 +14,8 @@
 <header class="header"><div class="wrap"><strong>Editor de enlaces · Grupo 05</strong><a href="index.html">← Ver portafolio</a></div></header>
 <main class="main wrap">
 <h1>Agrega los documentos del equipo</h1>
-<p class="lead">En esta pantalla puedes pegar los enlaces de archivos de Drive, formularios, hojas de cálculo o videos y asignarlos a cada parcial. No necesitas escribir código.</p>
-<div class="note"><strong>Importante:</strong> este editor no modifica Google Drive ni la web publicada automáticamente. Al terminar, pulsa <strong>“Descargar recursos.js”</strong> y reemplaza el archivo con ese nombre dentro de la carpeta de tu página (y en GitHub, si ya la publicaste).</div>
+<p class="lead">En esta pantalla puedes pegar los enlaces de archivos de Drive, formularios, hojas de cálculo o videos y asignarlos a cada parcial. No necesitas escribir código. Se muestra cada archivo directamente en la página sin carpetas.</p>
+<div class="note"><strong>Importante:</strong> este editor no modifica la web publicada automáticamente. Al terminar, pulsa <strong>“Descargar recursos.js”</strong> y reemplaza el archivo con ese nombre dentro de la carpeta de tu página (y en GitHub, si ya la publicaste).</div>
 <div class="toolbar"><button class="btn" id="download" type="button">↓ Descargar recursos.js</button><button class="btn secondary" type="button" id="preview">↗ Ver página actual</button></div>
 <p id="feedback" class="success" role="status"></p>
 <div class="panel"><h2>Recursos existentes</h2><p class="muted">Pega una dirección pública o compartida en el campo correspondiente. Los enlaces no configurados aparecerán como “Por vincular”.</p><div id="rows"></div></div>
@@ -23,7 +23,7 @@
 <form id="newResource" class="form-grid">
 <label>Título del archivo<input name="titulo" required maxlength="130" placeholder="Ej.: Excel - Pregunta 5 - Axel Revelo"></label>
 <label>Parcial<select name="parcial"><option value="1">Primer parcial</option><option value="2">Segundo parcial</option><option value="3">Tercer parcial</option></select></label>
-<label>Categoría<select name="categoria"><option>Encuesta y datos</option><option>Análisis estadístico</option><option>Informe y manuales</option><option>Material didáctico</option><option>Carpetas del proyecto</option></select></label>
+<label>Categoría<select name="categoria"><option>General</option><option>Axel Revelo</option><option>Estefano Iñaguazo</option><option>Julian Quinga</option><option>Cristian Viteri</option><option>Jhon Sangurima</option></select></label>
 <label>Tipo<input name="tipo" placeholder="PDF / Excel / Video" value="PDF"></label>
 <label class="span2">Descripción<input name="descripcion" placeholder="Explicación breve de lo que contiene el archivo"></label>
 <label class="span2">Enlace a Google Drive (u otra página web)<input name="url" type="url" placeholder="https://drive.google.com/file/d/.../view"></label>

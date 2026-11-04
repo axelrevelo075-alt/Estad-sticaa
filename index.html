@@ -2,123 +2,64 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portafolio académico de Estadística del Grupo 05, con entregas de los tres parciales y enlaces a Google Drive.">
-  <meta name="theme-color" content="#10223c">
-  <title>Portafolio de Estadística · Grupo 05 | ESPE</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%2310223c%22/><rect x=%2212%22 y=%2234%22 width=%2210%22 height=%2218%22 rx=%223%22 fill=%22%238bd5ce%22/><rect x=%2227%22 y=%2223%22 width=%2210%22 height=%2229%22 rx=%223%22 fill=%22%23fff%22/><rect x=%2242%22 y=%2212%22 width=%2210%22 height=%2240%22 rx=%223%22 fill=%22%23f7c486%22/></svg>" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102b31">
+  <meta name="description" content="Portafolio de Estadística del Grupo 05 de la Universidad de las Fuerzas Armadas ESPE. Documentos de los tres parciales.">
+  <title>Estadística · Grupo 05 | ESPE</title>
   <link rel="stylesheet" href="styles.css">
-
-
+  <script src="recursos.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="logo" href="#inicio" aria-label="Ir al inicio">
-        <span class="logo-mark"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="5" y="19" width="6" height="12" rx="2" fill="#8bd5ce"/><rect x="15" y="12" width="6" height="19" rx="2" fill="#fff"/><rect x="25" y="5" width="6" height="26" rx="2" fill="#f7c486"/></svg></span>
-        <span><strong>ESTADÍSTICA</strong><small>ESPE · GRUPO 05</small></span>
-      </a>
-      <nav class="top-nav" aria-label="Navegación superior">
-        <a href="#parciales">Parciales</a>
-        <a href="#documentos">Documentos</a><a href="#mapa">Mapa conceptual</a>
-        <a href="#proyecto">Proyecto</a>
-      </nav>
-      <a class="top-drive" id="topDrive" href="https://drive.google.com/drive/folders/1v25o8y0S-ThMb_HCe02XVSFLf07gldvm" target="_blank" rel="noopener noreferrer">Carpeta Drive <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="sitebar">
+  <div class="wrap sitebar-row">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span><strong>ESTADÍSTICA</strong><small>ESPE · GRUPO 05</small></span>
+    </a>
+    <span class="sitebar-caption">Portafolio académico</span>
+  </div>
+</header>
+<main id="contenido">
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="wrap hero-content">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="tiny-dot"></span> PROYECTO INTEGRADOR · ESTADÍSTICA</div>
+      <h1 id="hero-title">Análisis de datos<br><em>de estudiantes de provincia.</em></h1>
+      <p>Encuesta sobre gastos, residencia y movilidad en la Universidad de las Fuerzas Armadas ESPE.</p>
     </div>
-  </header>
-
-  <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="signal-dot"></span> PORTAFOLIO ACADÉMICO · 2026</div>
-          <h1>De los datos a las <span>conclusiones.</span></h1>
-          <p>Un espacio para explorar y consultar las evidencias, los análisis y los materiales del proyecto de <strong>Estadística del Grupo 05</strong>.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#parciales">Explorar parciales <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-            <a class="btn btn-ghost" id="heroDrive" href="https://drive.google.com/drive/folders/1v25o8y0S-ThMb_HCe02XVSFLf07gldvm" target="_blank" rel="noopener noreferrer">Abrir Google Drive <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          </div>
-          <div class="hero-author"><span class="avatar">AR</span><span><small>Responsable del sitio web</small><strong>Axel Revelo</strong></span></div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-grid"></div>
-          <div class="floating-badge badge-one"><span class="badge-dot"></span> ORGANIZACIÓN</div>
-          <div class="chart-panel">
-            <div class="chart-panel-head"><span><span class="tiny-square"></span> EXPLORACIÓN DE DATOS</span><span class="tiny-dots">•••</span></div>
-            <div class="visual-bars">
-              <div class="chart-lines"><i></i><i></i><i></i><i></i></div>
-              <div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div><div class="bar b4"></div><div class="bar b5"></div><div class="bar b6"></div><div class="bar b7"></div><div class="bar b8"></div>
-            </div>
-            <div class="visual-labels"><span>ENCUESTA</span><span>ANÁLISIS</span><span>RESULTADOS</span></div>
-          </div>
-          <div class="floating-badge badge-two"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg> TRABAJO EN EQUIPO</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="summary-wrap">
-      <div class="container summary-grid">
-        <div class="summary-item"><span class="summary-icon icon-blue">01</span><span><strong>03 parciales</strong><small>Navegación por entregas</small></span></div>
-        <div class="summary-item"><span class="summary-icon icon-teal">02</span><span><strong id="folderCount">2 carpetas</strong><small>Enlaces de Drive verificados</small></span></div>
-        <div class="summary-item"><span class="summary-icon icon-amber">03</span><span><strong>Índice digital</strong><small>Documentos organizados</small></span></div>
-      </div>
-    </section>
-
-    <section id="parciales" class="workspace section-space">
-      <div class="container">
-        <div class="section-topline"><span class="section-kicker">NAVEGA POR TU PORTAFOLIO</span><span class="section-rule"></span></div>
-        <div class="section-title-row"><div><h2>Contenido por parcial</h2><p>Selecciona un parcial para consultar sus recursos y entregables.</p></div><span class="section-mini">GRUPO 05 / ESTADÍSTICA</span></div>
-        <div class="partial-tabs" role="tablist" aria-label="Seleccionar parcial" id="partialTabs">
-          <button type="button" class="partial-tab active" role="tab" aria-selected="true" aria-controls="panelParcial" data-tab="1"><span class="tab-number">01</span><span class="tab-main"><strong>Primer parcial</strong><small>Encuesta y análisis</small></span><span class="tab-arrow">↗</span></button>
-          <button type="button" class="partial-tab" role="tab" aria-selected="false" aria-controls="panelParcial" data-tab="2"><span class="tab-number">02</span><span class="tab-main"><strong>Segundo parcial</strong><small>Materiales del período</small></span><span class="tab-arrow">↗</span></button>
-          <button type="button" class="partial-tab" role="tab" aria-selected="false" aria-controls="panelParcial" data-tab="3"><span class="tab-number">03</span><span class="tab-main"><strong>Tercer parcial</strong><small>Materiales del período</small></span><span class="tab-arrow">↗</span></button>
-        </div>
-        <div class="workspace-grid" id="panelParcial" role="tabpanel">
-          <aside class="sidebar" aria-label="Índice de contenido">
-            <div class="sidebar-heading"><span class="sidebar-bullet"></span><strong>Índice de contenido</strong></div>
-            <div id="indexList" class="index-list"></div>
-            <div class="aside-help"><span class="help-icon">↗</span><strong>Archivos originales</strong><p>Consulta la carpeta compartida de Google Drive.</p><a id="sidebarDrive" href="https://drive.google.com/drive/folders/1v25o8y0S-ThMb_HCe02XVSFLf07gldvm" target="_blank" rel="noopener noreferrer">Ir a Drive <span>↗</span></a></div>
-          </aside>
-          <div class="main-panel">
-            <div class="partial-intro"><div class="partial-intro-copy"><div class="partial-label" id="partialLabel">PRIMER PARCIAL</div><h3 id="partialTitle">Encuesta y análisis descriptivo</h3><p id="partialDesc">Explora los recursos disponibles de este parcial.</p></div><span class="partial-decoration" aria-hidden="true">01</span></div>
-            <div id="topics" class="topic-pills"></div>
-            <div class="catalogue" id="documentos">
-              <div class="catalogue-heading"><div><h3>Biblioteca de recursos</h3><p>Acceso a archivos y carpetas del proyecto.</p></div><div class="count-pill" id="resourceCount">0 recursos</div></div>
-              <label class="search-box" for="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" id="search" placeholder="Buscar documentos, temas o materiales..." autocomplete="off"><span>⌕</span></label>
-              <div class="filter-row" id="filters" aria-label="Filtros por tipo de material"></div>
-              <div id="resourceGroups" class="resource-groups" aria-live="polite"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="concept-section" id="mapa">
-    <div class="container">
-      <div class="section-topline"><span class="section-kicker">MAPA CONCEPTUAL DEL EQUIPO</span><span class="section-rule"></span></div>
-      <h2>Estadística: temas, subtemas y fórmulas</h2>
-      <p class="concept-lead">Anexo del mapa conceptual compartido. Aquí puedes ubicar los temas que aparecen en la imagen y consultar el original en Google Drive.</p>
-      <div class="concept-layout">
-        <div class="concept-outline">
-          <div class="concept-topic"><span>01</span><div><h3>Medidas de tendencia central y dispersión</h3><p><strong>Datos no agrupados:</strong> media, mediana, moda, rango, desviación media, varianza, desviación estándar, cuartiles, deciles, percentiles, coeficiente de variación y asimetría.</p><p><strong>Datos agrupados:</strong> intervalos, marca de clase, media, mediana, moda, dispersión, coeficiente de variación, asimetría y curtosis.</p></div></div>
-          <div class="concept-topic"><span>02</span><div><h3>Probabilidad y reglas</h3><p>Reglas aditivas, reglas multiplicativas, probabilidad condicional y teorema de Bayes.</p><div class="formula-mini">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</div></div></div>
-          <div class="concept-topic"><span>03</span><div><h3>Distribuciones de probabilidad</h3><p>Distribución probabilística de variables aleatorias, Binomial, Poisson, Hipergeométrica y Uniforme.</p><div class="formula-mini">μ = ΣxP(x)</div></div></div>
-        </div>
-        <div class="concept-visual">
-          <h3>Mapa conceptual original</h3>
-          <iframe title="Mapa conceptual de Estadística" loading="lazy" src="https://drive.google.com/file/d/1Yp1IClPCjHGv5DifVMx4udz35Zx-N8Rr/preview"></iframe>
-          <a class="concept-open" href="https://drive.google.com/file/d/1Yp1IClPCjHGv5DifVMx4udz35Zx-N8Rr/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Abrir el mapa en Google Drive ↗</a>
-          <small>La vista previa requiere acceso al archivo en Google Drive.</small>
-        </div>
-      </div>
+    <div class="hero-deco" aria-hidden="true">
+      <div class="axis axis-x"></div><div class="axis axis-y"></div>
+      <span class="bar one"></span><span class="bar two"></span><span class="bar three"></span><span class="bar four"></span>
+      <span class="line-one"></span><span class="line-two"></span><span class="line-three"></span>
     </div>
-  </section>
-  <section class="project-section" id="proyecto"><div class="container project-grid"><div><span class="section-kicker">SOBRE EL PROYECTO</span><h2>Aprender a interpretar la información.</h2><p>Este portafolio reúne la organización de los datos de la encuesta, sus tablas y representaciones gráficas, junto con los cálculos de tendencia central y dispersión que forman parte del trabajo.</p></div><div class="steps"><div class="step"><span>01</span><div><strong>Recopilar</strong><small>Formulario y base de respuestas</small></div></div><div class="step"><span>02</span><div><strong>Analizar</strong><small>Excel, Jamovi, tablas y medidas</small></div></div><div class="step"><span>03</span><div><strong>Comunicar</strong><small>Informe, recursos visuales y videos</small></div></div></div></div></section>
-  </main>
-
-  <footer class="footer"><div class="container footer-inner"><div><strong>ESTADÍSTICA <span>· GRUPO 05</span></strong><small>Universidad de las Fuerzas Armadas ESPE</small></div><div class="footer-right"><span>Responsable del sitio: Axel Revelo</span><a id="footerDrive" href="https://drive.google.com/drive/folders/1v25o8y0S-ThMb_HCe02XVSFLf07gldvm" target="_blank" rel="noopener noreferrer">Carpeta compartida ↗</a></div></div><div class="container fineprint">Los documentos de Google Drive se muestran según los permisos que conceda su propietario. Los enlaces marcados “Por vincular” son espacios pendientes de configurar.</div></footer>
-<script src="recursos.js" defer></script>
-<script src="app.js" defer></script>
+  </div>
+</section>
+<section class="collection" aria-labelledby="partial-label">
+  <div class="wrap">
+    <h2 class="sr-only" id="partial-label">Seleccionar parcial</h2>
+    <div class="tabs" role="tablist" aria-label="Parciales">
+      <button class="tab active" type="button" role="tab" data-parcial="1" aria-selected="true"><span class="tab-num">01</span><span>Primer parcial</span><span class="tab-count" data-count="1"></span></button>
+      <button class="tab" type="button" role="tab" data-parcial="2" aria-selected="false"><span class="tab-num">02</span><span>Segundo parcial</span><span class="tab-count" data-count="2"></span></button>
+      <button class="tab" type="button" role="tab" data-parcial="3" aria-selected="false"><span class="tab-num">03</span><span>Tercer parcial</span><span class="tab-count" data-count="3"></span></button>
+    </div>
+    <div class="contents" id="documentos">
+      <div class="section-head">
+        <div><div class="section-overline">BIBLIOTECA DEL PROYECTO</div><h2 id="section-title">Primer parcial</h2><p id="section-subtitle" class="subtitle">Documentos del equipo organizados por integrante.</p></div>
+        <div class="file-total"><strong id="file-counter">0</strong><span>archivos</span></div>
+      </div>
+      <div class="tools" id="tools">
+        <div class="index-line"><span class="index-title">Índice</span><nav class="index" id="index" aria-label="Índice de documentos"></nav></div>
+        <label class="search-wrap" for="search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.9" cy="10.9" r="7.3"/><path d="m16.5 16.5 4.2 4.2"/></svg><input type="search" id="search" placeholder="Buscar un archivo por nombre..." autocomplete="off"><span class="search-key" aria-hidden="true">⌕</span></label>
+      </div>
+      <div id="sections" class="sections" aria-live="polite"></div>
+      <div id="empty" class="empty" hidden><span class="empty-glyph" aria-hidden="true">○</span><h3 id="empty-title">Sin archivos todavía</h3><p id="empty-message">Los archivos aparecerán aquí cuando estén disponibles.</p></div>
+      <div class="remaining" id="remaining"><span class="remaining-point" aria-hidden="true"></span><span><strong>Por completar:</strong> videos del equipo y documentos de Cristian Viteri y Jhon Sangurima.</span></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><span>© Grupo 05 · Universidad de las Fuerzas Armadas ESPE</span><span>Los archivos se abren según los permisos de cada documento.</span></div></footer>
 </body>
 </html>
