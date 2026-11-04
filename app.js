@@ -53,12 +53,21 @@
     index.append(a);
   }
 
-  function createGeneralSection(docs) {
+  function createGeneralSection(docs,videos) {
     const section = make("section","document-section");
     section.id = "documentos-generales";
-    section.append(make("h3","section-subheading","Documentos generales"));
-    section.append(make("p","section-description","Informe, encuesta, hoja de cálculo y mapa conceptual."));
-    section.append(createFileList(docs));
+    if(docs.length){
+      section.append(make("h3","section-subheading","Documentos generales"));
+      section.append(make("p","section-description","Informe, encuesta, hoja de cálculo y mapa conceptual."));
+      section.append(createFileList(docs));
+    }
+    if(videos.length){
+      const videoSection = make("div","video-subsection");
+      videoSection.id = "videos-equipo";
+      videoSection.append(make("h3","section-subheading","Videos del equipo"));
+      videoSection.append(createFileList(videos));
+      section.append(videoSection);
+    }
     sections.append(section);
   }
 
@@ -105,7 +114,7 @@
       ? "Encuentra los documentos generales y los trabajos de cada integrante."
       : "Este parcial aún no tiene documentos disponibles.";
     const displayedCount = selectedPartial===1
-      ? (selectedSection==="individual" ? members.reduce((n,name)=>n+(groups[name]||[]).length,0) : (groups.General||[]).length)
+      ? (selectedSection==="individual" ? members.reduce((n,name)=>n+(groups[name]||[]).length,0) : (groups.General||[]).length + (groups.Videos||[]).length)
       : docs.length;
     fileCount.textContent = displayedCount + (displayedCount===1 ? " archivo" : " archivos");
     const viewNav = document.getElementById("viewNav");
@@ -118,7 +127,7 @@
     sections.replaceChildren();
 
     if(selectedPartial === 1) {
-      todo.textContent = "Por completar: videos del equipo y archivos de los integrantes que aún no han entregado.";
+      todo.textContent = "Por completar: trabajos individuales de Jhon Sangurima y documentos del segundo y tercer parcial.";
       todo.style.display = "block";
     } else {
       todo.style.display = "none";
@@ -133,11 +142,15 @@
     }
 
     const general = groups.General || [];
+    const videos = groups.Videos || [];
     const generalGroupMatch = normalize("Documentos generales").includes(query);
+    const videosGroupMatch = normalize("Videos del equipo").includes(query);
     const visibleGeneral = general.filter(doc=> !query || generalGroupMatch || normalize(doc[0] + " " + doc[1]).includes(query));
-    if(visibleGeneral.length && selectedSection==="general") {
-      addIndex("Documentos generales","#documentos-generales",visibleGeneral.length);
-      createGeneralSection(visibleGeneral);
+    const visibleVideos = videos.filter(doc=> !query || videosGroupMatch || normalize(doc[0] + " " + doc[1]).includes(query));
+    if((visibleGeneral.length || visibleVideos.length) && selectedSection==="general") {
+      if(visibleGeneral.length) addIndex("Documentos generales","#documentos-generales",visibleGeneral.length);
+      if(visibleVideos.length) addIndex("Videos del equipo","#videos-equipo",visibleVideos.length);
+      createGeneralSection(visibleGeneral,visibleVideos);
     }
 
     const individualGroupMatch = normalize("Trabajos individuales").includes(query);
@@ -156,7 +169,7 @@
       createIndividualSection(people,query);
     }
 
-    if((selectedSection==="general" && !visibleGeneral.length) || (selectedSection==="individual" && !people.length)) {
+    if((selectedSection==="general" && !visibleGeneral.length && !visibleVideos.length) || (selectedSection==="individual" && !people.length)) {
       const empty = make("div","empty");
       empty.append(make("h3","","No encontramos ese archivo"));
       empty.append(make("p","","Busca por el nombre de un integrante o por el documento."));

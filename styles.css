@@ -89,3 +89,9 @@ a{text-decoration:none;color:inherit} button,input{font:inherit} button{cursor:p
 .view-num{font-size:11px;color:#9c673f;background:#f6eee6;border-radius:6px;padding:8px}
 .view-quantity{margin-left:auto;font-weight:600;font-size:11px;color:#718785}
 @media(max-width:660px){.view-nav{grid-template-columns:1fr;gap:8px;padding:12px 14px}.view-button{min-height:57px}.hero-to-work{margin-bottom:20px}}
+
+/* Vídeos del Grupo 05 dentro de Documentos generales */
+.video-subsection{display:grid;gap:13px;margin-top:18px}
+#videos-equipo{scroll-margin-top:100px}
+.type-Video{background:#fcefea;color:#b45b40}
+.video-subsection .item:hover{background:#f9fbfa}

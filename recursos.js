@@ -1,3 +1,4 @@
+/* Catálogo sincronizado con archivos del Drive del Grupo 05, sin enlaces a carpetas. */
 window.PORTAFOLIO_DATA = {
   "meta": {
     "titulo": "Portafolio de Estadística · Grupo 05",
@@ -14,11 +15,6 @@ window.PORTAFOLIO_DATA = {
           "https://drive.google.com/file/d/155c8Qiq9A9-wTcLbX9gQ9cVlEXoqfa9F/view?usp=drivesdk"
         ],
         [
-          "Análisis de Datos_Encuestas_Datos Agrupados y No Agrupados.xlsx",
-          "Excel",
-          "https://docs.google.com/spreadsheets/d/1af5hvWpXXT8kAujvOolSiHIT_HnE9yES/edit?usp=drivesdk&ouid=106199741310115389819&rtpof=true&sd=true"
-        ],
-        [
           "Encuesta sobre estudiantes de provincia en la Universidad de las Fuerzas Armadas “ESPE”",
           "Formulario",
           "https://docs.google.com/forms/d/1dmn2X7P0UrNXDmr0C4qCEH2EN03DnIcy1jRsmMZt6-g/edit?usp=drivesdk"
@@ -29,9 +25,26 @@ window.PORTAFOLIO_DATA = {
           "https://drive.google.com/file/d/19H9WWs3w3EHaznl_pav9e3LI3Wc6-cYL/view?usp=drivesdk"
         ],
         [
+          "Análisis de Datos_Encuestas_Datos Agrupados y No Agrupados.xlsx",
+          "Excel",
+          "https://docs.google.com/spreadsheets/d/1af5hvWpXXT8kAujvOolSiHIT_HnE9yES/edit?usp=drivesdk&ouid=106199741310115389819&rtpof=true&sd=true"
+        ],
+        [
           "Mapa conceptual Estadística - tendencia central, dispersión y distribuciones.jpeg",
           "Imagen",
           "https://drive.google.com/file/d/1Yp1IClPCjHGv5DifVMx4udz35Zx-N8Rr/view?usp=drivesdk"
+        ]
+      ],
+      "Videos": [
+        [
+          "Video_Educativo_Grupo 05.mp4",
+          "Video",
+          "https://drive.google.com/file/d/1bTRbiRePN9l3hP7Yr2YqBUKX0qiNlXnU/view?usp=drivesdk"
+        ],
+        [
+          "Video_Informativo_Grupo 05.mp4",
+          "Video",
+          "https://drive.google.com/file/d/1hUW2hLhmDZXDlHxqbE_tE3LQ9CzyFf6B/view?usp=drivesdk"
         ]
       ],
       "Axel Revelo": [
@@ -134,7 +147,40 @@ window.PORTAFOLIO_DATA = {
           "CSV",
           "https://drive.google.com/file/d/1Qfftnyz8jRG6kRBXlbguFvID5Mqrq84N/view?usp=drivesdk"
         ]
-      ]
+      ],
+      "Cristian Viteri": [
+        [
+          "Analisis_Pregunta 8_Cristian Viteri.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/1mzuQclLtv-7ipl1PLw1124242qoYkaxP/view?usp=drivesdk"
+        ],
+        [
+          "Excel_Pregunta 8_Cristian Viteri.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/1UkhTmVdU4SVUEA-Ppr6swa5LFh0FF35y/view?usp=drivesdk"
+        ],
+        [
+          "Manual_Excel_JAMOVI_Cristian Viteri.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/1Y5_ZYIHW2an_Olnkv7cMwewzj9VUWeQ9/view?usp=drivesdk"
+        ],
+        [
+          "JAMOVI_Pregunta 8_Cristian Viteri.pdf",
+          "PDF",
+          "https://drive.google.com/file/d/1vpzm2l300JJYC_yJj0NvRWYKk-ed_3hE/view?usp=drivesdk"
+        ],
+        [
+          "JAMOVI_Pregunta 8_Cristian Viteri.omv",
+          "Jamovi",
+          "https://drive.google.com/file/d/1KIoqXEIzGy5dUfC8csn85d67Qt16tPlI/view?usp=drivesdk"
+        ],
+        [
+          "Excel_Pregunta 8_Cristian Viteri.xlsx",
+          "Excel",
+          "https://docs.google.com/spreadsheets/d/1obVxFeBnZX9De0vNa_XLNSlQ-4twequ2/edit?usp=drivesdk&ouid=106199741310115389819&rtpof=true&sd=true"
+        ]
+      ],
+      "Jhon Sangurima": []
     },
     "2": {},
     "3": {}
